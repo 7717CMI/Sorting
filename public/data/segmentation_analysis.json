@@ -1,0 +1,46 @@
+{
+  "Global": {
+    "By Core Sorting Technology": {},
+    "By Machine Configuration": {},
+    "By System Architecture": {},
+    "By Food Product Type": {},
+    "By Capacity": {},
+    "By Automation Level": {},
+    "By Distribution Channel": {},
+    "By Region": {
+      "North America": {
+        "U.S.": {},
+        "Canada": {}
+      },
+      "Europe": {
+        "U.K.": {},
+        "Germany": {},
+        "France": {},
+        "Italy": {},
+        "Spain": {},
+        "Russia": {},
+        "Rest of Europe": {}
+      },
+      "Asia Pacific": {
+        "China": {},
+        "India": {},
+        "Japan": {},
+        "South Korea": {},
+        "ASEAN": {},
+        "Australia": {},
+        "Rest of Asia Pacific": {}
+      },
+      "Middle East & Africa": {
+        "GCC": {},
+        "South Africa": {},
+        "Rest of Middle East & Africa": {}
+      },
+      "Latin America": {
+        "Brazil": {},
+        "Mexico": {},
+        "Argentina": {},
+        "Rest of Latin America": {}
+      }
+    }
+  }
+}
