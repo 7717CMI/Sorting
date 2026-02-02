@@ -7,9 +7,10 @@ interface CustomerData {
   // Customer Information
   customerName: string
   businessType: string
-  coreBusinessActivities: string
-  geographicPresence: string
-  vehicleCategoriesHandled: string
+  primaryFoodProductType: string
+  facilityType: string
+  installedSortingCapacity: string
+  numberOfSortingLines: number
   // Contact Details
   keyContactPerson: string
   designation: string
@@ -17,264 +18,318 @@ interface CustomerData {
   phoneNumber: string
   linkedInProfile: string
   websiteUrl: string
-  // Professional Drivers (for Proposition 2)
-  primaryBusinessObjective: string
-  keyPainPoints: string
-  upcomingTriggersAndInitiatives: string
-  // Purchasing Behaviour Metrics (for Proposition 3)
-  vendorSelectionCriteria: string
-  preferredVendorType: string
-  contractDurationPreference: string
-  // Solution Requirements (for Proposition 3)
-  preferredSolutionType: string
-  preferredDeploymentModel: string
-  performanceExpectations: string
+  // Procurement & Purchase Metrics (for Proposition 2)
+  annualSortingMachineProcurement: string
+  preferredProcurementModel: string
+  averageProcurementLeadTime: string
+  replacementCycleOfMachines: string
+  // Digital & Technology Adoption Metrics (for Proposition 3)
+  levelOfAutomation: string
+  percentageOfLinesWithPLC: string
+  useOfAIorVisionBasedSorting: string
+  predictiveMaintenanceTools: string
+  remoteMonitoringCapability: string
+  // Future Demand & Expansion Metrics (for Proposition 3)
+  plannedCapacityExpansion: string
+  expectedNewSortingMachinePurchases: string
+  newProductIntroductionPlanned: string
+  newFacilityConstructionPlanned: string
   // CMI Insights (for Proposition 3)
   customerBenchmarking: string
   additionalComments: string
 }
 
-// Sample data - Customers of Vehicle Scrapping/Recycling Companies in India
+// Sample data - Food Sorting Machine Customers
 const sampleCustomerData: CustomerData[] = [
   {
-    customerName: 'Ola Fleet Technologies',
-    businessType: 'Fleet Operator',
-    coreBusinessActivities: 'Ride hailing fleet management',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger Vehicles, EVs',
-    keyContactPerson: 'Hemant Bakshi',
-    designation: 'CEO - Ola Fleet',
-    emailAddress: 'h.bakshi@olafleet.com',
-    phoneNumber: '+91 80 4690 0000',
-    linkedInProfile: 'linkedin.com/in/hemantbakshi',
-    websiteUrl: 'www.olacabs.com',
-    primaryBusinessObjective: 'Compliance, cost reduction, EV transition',
-    keyPainPoints: 'Disposal of aging fleet, compliance',
-    upcomingTriggersAndInitiatives: 'Fleet renewal, EV expansion',
-    vendorSelectionCriteria: 'Cost, compliance, speed',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Long term',
-    preferredSolutionType: 'Depollution, reporting tools',
-    preferredDeploymentModel: 'Third party, LTSA',
-    performanceExpectations: 'High efficiency, fast turnaround',
+    customerName: 'ABC Fresh Produce Ltd',
+    businessType: 'Food Processor',
+    primaryFoodProductType: 'Fruits & Vegetables',
+    facilityType: 'Processing Plant',
+    installedSortingCapacity: '10 tons/hour',
+    numberOfSortingLines: 3,
+    keyContactPerson: 'John Smith',
+    designation: 'Operations Manager',
+    emailAddress: 'j.smith@abcfresh.com',
+    phoneNumber: '+1 555 0100',
+    linkedInProfile: 'linkedin.com/in/johnsmith',
+    websiteUrl: 'www.abcfresh.com',
+    annualSortingMachineProcurement: '$500,000',
+    preferredProcurementModel: 'Distributor',
+    averageProcurementLeadTime: '8 weeks',
+    replacementCycleOfMachines: '5 years',
+    levelOfAutomation: 'Semi-Automatic',
+    percentageOfLinesWithPLC: '67%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'Medium',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '25%',
+    expectedNewSortingMachinePurchases: '2 machines',
+    newProductIntroductionPlanned: 'Fresh produce',
+    newFacilityConstructionPlanned: 'Yes',
     customerBenchmarking: 'High potential customer',
-    additionalComments: 'Large aging fleet'
+    additionalComments: 'Expanding operations'
   },
   {
-    customerName: 'Uber India Fleet Partners',
-    businessType: 'Fleet Operator',
-    coreBusinessActivities: 'Taxi fleet operations',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger vehicles',
-    keyContactPerson: 'Prabhjeet Singh',
-    designation: 'President - Uber India',
-    emailAddress: 'p.singh@uber.com',
-    phoneNumber: '+91 124 4567 800',
-    linkedInProfile: 'linkedin.com/in/prabhjeetsingh',
-    websiteUrl: 'www.uber.com/in',
-    primaryBusinessObjective: 'Compliance, fleet refresh',
-    keyPainPoints: 'ELV logistics, deregistration',
-    upcomingTriggersAndInitiatives: 'Fleet upgrade programs',
-    vendorSelectionCriteria: 'Cost, efficiency',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Medium term',
-    preferredSolutionType: 'Compliance systems',
-    preferredDeploymentModel: 'Third party',
-    performanceExpectations: 'ROI focused',
-    customerBenchmarking: 'High volume',
-    additionalComments: 'Partner driven'
-  },
-  {
-    customerName: 'BluSmart Mobility',
-    businessType: 'Fleet Operator (Electric)',
-    coreBusinessActivities: 'Electric cab fleet',
-    geographicPresence: 'NCR, Bengaluru',
-    vehicleCategoriesHandled: 'EVs',
-    keyContactPerson: 'Anmol Jaggi',
-    designation: 'Co-Founder & CEO',
-    emailAddress: 'a.jaggi@blusmart.in',
-    phoneNumber: '+91 124 4567 890',
-    linkedInProfile: 'linkedin.com/in/anmoljaggi',
-    websiteUrl: 'www.blusmart.in',
-    primaryBusinessObjective: 'Sustainability, circular economy',
-    keyPainPoints: 'EV battery disposal',
-    upcomingTriggersAndInitiatives: 'EV lifecycle management',
-    vendorSelectionCriteria: 'Compliance, ESG',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Long term',
-    preferredSolutionType: 'Battery recycling, audit tools',
-    preferredDeploymentModel: 'Third party',
-    performanceExpectations: 'High recovery, ESG goals',
-    customerBenchmarking: 'Strategic EV customer',
-    additionalComments: 'EV focused'
-  },
-  {
-    customerName: 'ORIX India Car Leasing',
-    businessType: 'Leasing Company',
-    coreBusinessActivities: 'Corporate vehicle leasing',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger vehicles',
-    keyContactPerson: 'Sandeep Gambhir',
-    designation: 'MD & CEO',
-    emailAddress: 's.gambhir@orix.co.in',
-    phoneNumber: '+91 124 4715 500',
-    linkedInProfile: 'linkedin.com/in/sandeepgambhir',
-    websiteUrl: 'www.orixindia.com',
-    primaryBusinessObjective: 'Compliance, cost control',
-    keyPainPoints: 'End of lease disposal',
-    upcomingTriggersAndInitiatives: 'Lease portfolio renewal',
-    vendorSelectionCriteria: 'Compliance, ROI',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Medium term',
-    preferredSolutionType: 'Data reporting tools',
-    preferredDeploymentModel: 'Third party',
-    performanceExpectations: 'Predictable ROI',
-    customerBenchmarking: 'High potential',
-    additionalComments: 'Corporate fleets'
-  },
-  {
-    customerName: 'Ayvens India (LeasePlan)',
-    businessType: 'Leasing Company',
-    coreBusinessActivities: 'Fleet leasing & remarketing',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger vehicles',
-    keyContactPerson: 'Rajesh Mani',
-    designation: 'Country Director',
-    emailAddress: 'r.mani@ayvens.com',
-    phoneNumber: '+91 22 6842 3000',
-    linkedInProfile: 'linkedin.com/in/rajeshmani',
-    websiteUrl: 'www.ayvens.com/in',
-    primaryBusinessObjective: 'ESG, cost optimization',
-    keyPainPoints: 'ELV processing',
-    upcomingTriggersAndInitiatives: 'Green fleet strategy',
-    vendorSelectionCriteria: 'Compliance, efficiency',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Long term',
-    preferredSolutionType: 'Traceability software',
-    preferredDeploymentModel: 'Third party',
-    performanceExpectations: 'High efficiency',
+    customerName: 'Global Grains Co',
+    businessType: 'Agribusiness Operator',
+    primaryFoodProductType: 'Grains & Pulses',
+    facilityType: 'Sorting Center',
+    installedSortingCapacity: '15 tons/hour',
+    numberOfSortingLines: 5,
+    keyContactPerson: 'Sarah Johnson',
+    designation: 'Plant Director',
+    emailAddress: 's.johnson@globalgrains.com',
+    phoneNumber: '+1 555 0200',
+    linkedInProfile: 'linkedin.com/in/sarahjohnson',
+    websiteUrl: 'www.globalgrains.com',
+    annualSortingMachineProcurement: '$750,000',
+    preferredProcurementModel: 'In-House',
+    averageProcurementLeadTime: '12 weeks',
+    replacementCycleOfMachines: '7 years',
+    levelOfAutomation: 'Automatic',
+    percentageOfLinesWithPLC: '80%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'High',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '30%',
+    expectedNewSortingMachinePurchases: '3 machines',
+    newProductIntroductionPlanned: 'Grains',
+    newFacilityConstructionPlanned: 'No',
     customerBenchmarking: 'Strategic customer',
-    additionalComments: 'Global leasing group'
+    additionalComments: 'Long-term partnership'
   },
   {
-    customerName: 'Tata Steel Recycling',
-    businessType: 'Material Buyer',
-    coreBusinessActivities: 'Steel recycling',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger, commercial',
-    keyContactPerson: 'Ashish Anupam',
-    designation: 'VP - Raw Materials',
-    emailAddress: 'a.anupam@tatasteel.com',
-    phoneNumber: '+91 657 2431 000',
-    linkedInProfile: 'linkedin.com/in/ashishanupam',
-    websiteUrl: 'www.tatasteel.com',
-    primaryBusinessObjective: 'Raw material sourcing',
-    keyPainPoints: 'Scrap quality consistency',
-    upcomingTriggersAndInitiatives: 'Capacity expansion',
-    vendorSelectionCriteria: 'Quality, volume, price',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Long term',
-    preferredSolutionType: 'Sorting & shredding technology',
-    preferredDeploymentModel: 'Own + partners',
-    performanceExpectations: 'High recovery',
-    customerBenchmarking: 'Anchor buyer',
-    additionalComments: 'Steel major'
+    customerName: 'Premium Nuts Ltd',
+    businessType: 'Food Processor',
+    primaryFoodProductType: 'Nuts & Dates',
+    facilityType: 'Processing Plant',
+    installedSortingCapacity: '5 tons/hour',
+    numberOfSortingLines: 2,
+    keyContactPerson: 'Michael Chen',
+    designation: 'Operations Head',
+    emailAddress: 'm.chen@premiumnuts.com',
+    phoneNumber: '+1 555 0300',
+    linkedInProfile: 'linkedin.com/in/michaelchen',
+    websiteUrl: 'www.premiumnuts.com',
+    annualSortingMachineProcurement: '$300,000',
+    preferredProcurementModel: 'System',
+    averageProcurementLeadTime: '6 weeks',
+    replacementCycleOfMachines: '4 years',
+    levelOfAutomation: 'Semi-Automatic',
+    percentageOfLinesWithPLC: '50%',
+    useOfAIorVisionBasedSorting: 'No',
+    predictiveMaintenanceTools: 'Low',
+    remoteMonitoringCapability: 'No',
+    plannedCapacityExpansion: '15%',
+    expectedNewSortingMachinePurchases: '1 machine',
+    newProductIntroductionPlanned: 'Nuts',
+    newFacilityConstructionPlanned: 'Yes',
+    customerBenchmarking: 'Medium potential',
+    additionalComments: 'Quality focused'
   },
   {
-    customerName: 'JSW Steel Recycling',
-    businessType: 'Material Buyer',
-    coreBusinessActivities: 'Scrap metal processing',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger, commercial',
-    keyContactPerson: 'Jayant Acharya',
-    designation: 'Director - Commercial',
-    emailAddress: 'j.acharya@jsw.in',
-    phoneNumber: '+91 22 4286 1000',
-    linkedInProfile: 'linkedin.com/in/jayantacharya',
-    websiteUrl: 'www.jsw.in',
-    primaryBusinessObjective: 'Circular economy',
-    keyPainPoints: 'Scrap supply volatility',
-    upcomingTriggersAndInitiatives: 'Recycling investments',
-    vendorSelectionCriteria: 'Cost, quality',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Long term',
-    preferredSolutionType: 'Metal recovery systems',
-    preferredDeploymentModel: 'Own + partners',
-    performanceExpectations: 'High throughput',
-    customerBenchmarking: 'Large buyer',
-    additionalComments: 'Industrial recycler'
+    customerName: 'Fresh Valley Packagers',
+    businessType: 'Packager',
+    primaryFoodProductType: 'Fruits & Vegetables',
+    facilityType: 'Packaging Center',
+    installedSortingCapacity: '8 tons/hour',
+    numberOfSortingLines: 3,
+    keyContactPerson: 'Emily Davis',
+    designation: 'Facility Manager',
+    emailAddress: 'e.davis@freshvalley.com',
+    phoneNumber: '+1 555 0400',
+    linkedInProfile: 'linkedin.com/in/emilydavis',
+    websiteUrl: 'www.freshvalley.com',
+    annualSortingMachineProcurement: '$450,000',
+    preferredProcurementModel: 'Distributor',
+    averageProcurementLeadTime: '10 weeks',
+    replacementCycleOfMachines: '6 years',
+    levelOfAutomation: 'Fully Automatic',
+    percentageOfLinesWithPLC: '100%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'High',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '40%',
+    expectedNewSortingMachinePurchases: '4 machines',
+    newProductIntroductionPlanned: 'Fresh produce',
+    newFacilityConstructionPlanned: 'Yes',
+    customerBenchmarking: 'High growth customer',
+    additionalComments: 'Innovation leader'
   },
   {
-    customerName: 'Mahindra First Choice',
-    businessType: 'Used Parts Buyer',
-    coreBusinessActivities: 'Used parts distribution',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger vehicles',
-    keyContactPerson: 'Ashutosh Pandey',
+    customerName: 'AgriTech Distribution',
+    businessType: 'Distributor',
+    primaryFoodProductType: 'Grains & Pulses',
+    facilityType: 'Distribution Center',
+    installedSortingCapacity: '20 tons/hour',
+    numberOfSortingLines: 6,
+    keyContactPerson: 'Robert Wilson',
+    designation: 'VP Operations',
+    emailAddress: 'r.wilson@agritech.com',
+    phoneNumber: '+1 555 0500',
+    linkedInProfile: 'linkedin.com/in/robertwilson',
+    websiteUrl: 'www.agritech.com',
+    annualSortingMachineProcurement: '$1,000,000',
+    preferredProcurementModel: 'In-House',
+    averageProcurementLeadTime: '14 weeks',
+    replacementCycleOfMachines: '8 years',
+    levelOfAutomation: 'Automatic',
+    percentageOfLinesWithPLC: '85%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'High',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '20%',
+    expectedNewSortingMachinePurchases: '2 machines',
+    newProductIntroductionPlanned: 'Grains',
+    newFacilityConstructionPlanned: 'No',
+    customerBenchmarking: 'Key account',
+    additionalComments: 'Regional leader'
+  },
+  {
+    customerName: 'OrganicHarvest Co',
+    businessType: 'Food Processor',
+    primaryFoodProductType: 'Fruits & Vegetables',
+    facilityType: 'Processing Plant',
+    installedSortingCapacity: '12 tons/hour',
+    numberOfSortingLines: 4,
+    keyContactPerson: 'Lisa Martinez',
+    designation: 'Plant Manager',
+    emailAddress: 'l.martinez@organicharvest.com',
+    phoneNumber: '+1 555 0600',
+    linkedInProfile: 'linkedin.com/in/lisamartinez',
+    websiteUrl: 'www.organicharvest.com',
+    annualSortingMachineProcurement: '$600,000',
+    preferredProcurementModel: 'System',
+    averageProcurementLeadTime: '9 weeks',
+    replacementCycleOfMachines: '5 years',
+    levelOfAutomation: 'Semi-Automatic',
+    percentageOfLinesWithPLC: '75%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'Medium',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '35%',
+    expectedNewSortingMachinePurchases: '3 machines',
+    newProductIntroductionPlanned: 'Fresh produce',
+    newFacilityConstructionPlanned: 'Yes',
+    customerBenchmarking: 'Sustainable leader',
+    additionalComments: 'Organic certified'
+  },
+  {
+    customerName: 'Global Food Solutions',
+    businessType: 'Agribusiness Operator',
+    primaryFoodProductType: 'Nuts & Dates',
+    facilityType: 'Sorting Center',
+    installedSortingCapacity: '18 tons/hour',
+    numberOfSortingLines: 5,
+    keyContactPerson: 'David Brown',
+    designation: 'Operations Director',
+    emailAddress: 'd.brown@globalfood.com',
+    phoneNumber: '+1 555 0700',
+    linkedInProfile: 'linkedin.com/in/davidbrown',
+    websiteUrl: 'www.globalfood.com',
+    annualSortingMachineProcurement: '$850,000',
+    preferredProcurementModel: 'Distributor',
+    averageProcurementLeadTime: '11 weeks',
+    replacementCycleOfMachines: '6 years',
+    levelOfAutomation: 'Fully Automatic',
+    percentageOfLinesWithPLC: '90%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'High',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '50%',
+    expectedNewSortingMachinePurchases: '5 machines',
+    newProductIntroductionPlanned: 'Nuts',
+    newFacilityConstructionPlanned: 'Yes',
+    customerBenchmarking: 'Strategic partner',
+    additionalComments: 'Multi-facility operator'
+  },
+  {
+    customerName: 'Quality Grains Inc',
+    businessType: 'Packager',
+    primaryFoodProductType: 'Grains & Pulses',
+    facilityType: 'Packaging Center',
+    installedSortingCapacity: '14 tons/hour',
+    numberOfSortingLines: 4,
+    keyContactPerson: 'Jennifer Lee',
+    designation: 'Quality Manager',
+    emailAddress: 'j.lee@qualitygrains.com',
+    phoneNumber: '+1 555 0800',
+    linkedInProfile: 'linkedin.com/in/jenniferlee',
+    websiteUrl: 'www.qualitygrains.com',
+    annualSortingMachineProcurement: '$550,000',
+    preferredProcurementModel: 'In-House',
+    averageProcurementLeadTime: '7 weeks',
+    replacementCycleOfMachines: '5 years',
+    levelOfAutomation: 'Automatic',
+    percentageOfLinesWithPLC: '100%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'Medium',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '28%',
+    expectedNewSortingMachinePurchases: '3 machines',
+    newProductIntroductionPlanned: 'Grains',
+    newFacilityConstructionPlanned: 'No',
+    customerBenchmarking: 'Quality leader',
+    additionalComments: 'Premium segment'
+  },
+  {
+    customerName: 'Fresh Produce Network',
+    businessType: 'Distributor',
+    primaryFoodProductType: 'Fruits & Vegetables',
+    facilityType: 'Distribution Center',
+    installedSortingCapacity: '25 tons/hour',
+    numberOfSortingLines: 7,
+    keyContactPerson: 'Thomas Anderson',
     designation: 'CEO',
-    emailAddress: 'a.pandey@mahindrafirstchoice.com',
-    phoneNumber: '+91 124 4526 300',
-    linkedInProfile: 'linkedin.com/in/ashutoshpandey',
-    websiteUrl: 'www.mahindrafirstchoice.com',
-    primaryBusinessObjective: 'Revenue, parts sourcing',
-    keyPainPoints: 'Supply of quality parts',
-    upcomingTriggersAndInitiatives: 'Used parts marketplace',
-    vendorSelectionCriteria: 'Quality, consistency',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Medium term',
-    preferredSolutionType: 'Dismantling solutions',
-    preferredDeploymentModel: 'Partner model',
-    performanceExpectations: 'ROI driven',
-    customerBenchmarking: 'Major used parts player',
-    additionalComments: 'Part of Mahindra Group'
+    emailAddress: 't.anderson@freshproduce.com',
+    phoneNumber: '+1 555 0900',
+    linkedInProfile: 'linkedin.com/in/thomasanderson',
+    websiteUrl: 'www.freshproduce.com',
+    annualSortingMachineProcurement: '$1,200,000',
+    preferredProcurementModel: 'System',
+    averageProcurementLeadTime: '15 weeks',
+    replacementCycleOfMachines: '7 years',
+    levelOfAutomation: 'Fully Automatic',
+    percentageOfLinesWithPLC: '95%',
+    useOfAIorVisionBasedSorting: 'Yes',
+    predictiveMaintenanceTools: 'High',
+    remoteMonitoringCapability: 'Yes',
+    plannedCapacityExpansion: '45%',
+    expectedNewSortingMachinePurchases: '6 machines',
+    newProductIntroductionPlanned: 'Fresh produce',
+    newFacilityConstructionPlanned: 'Yes',
+    customerBenchmarking: 'Top tier customer',
+    additionalComments: 'National coverage'
   },
   {
-    customerName: 'OLX Autos India (part of OLX Group)',
-    businessType: 'Used Parts Buyer',
-    coreBusinessActivities: 'Auto resale and parts',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'Passenger vehicles',
-    keyContactPerson: 'Amit Kumar',
-    designation: 'Country Head',
-    emailAddress: 'a.kumar@olxautos.in',
-    phoneNumber: '+91 124 4688 700',
-    linkedInProfile: 'linkedin.com/in/amitkumar-olx',
-    websiteUrl: 'www.olxautos.in',
-    primaryBusinessObjective: 'Market expansion',
-    keyPainPoints: 'Part traceability',
-    upcomingTriggersAndInitiatives: 'Auto ecosystem growth',
-    vendorSelectionCriteria: 'Cost, compliance',
-    preferredVendorType: 'Local',
-    contractDurationPreference: 'Short term',
-    preferredSolutionType: 'Data tools',
-    preferredDeploymentModel: 'Partner model',
-    performanceExpectations: 'Fast processing',
-    customerBenchmarking: 'Digital platform',
-    additionalComments: 'Marketplace driven'
-  },
-  {
-    customerName: 'TVS Supply Chain Solutions',
-    businessType: 'Logistics Provider',
-    coreBusinessActivities: 'Vehicle transport & logistics',
-    geographicPresence: 'Pan India',
-    vehicleCategoriesHandled: 'All vehicle types',
-    keyContactPerson: 'R. Dinesh',
-    designation: 'Managing Director',
-    emailAddress: 'r.dinesh@tvsscs.com',
-    phoneNumber: '+91 44 2833 2000',
-    linkedInProfile: 'linkedin.com/in/rdinesh-tvs',
-    websiteUrl: 'www.tvsscs.com',
-    primaryBusinessObjective: 'Revenue, service expansion',
-    keyPainPoints: 'Handling ELVs safely',
-    upcomingTriggersAndInitiatives: 'Reverse logistics growth',
-    vendorSelectionCriteria: 'Cost, reliability',
-    preferredVendorType: 'Integrated',
-    contractDurationPreference: 'Long term',
-    preferredSolutionType: 'Logistics & tracking systems',
-    preferredDeploymentModel: 'Third party',
-    performanceExpectations: 'High efficiency',
-    customerBenchmarking: 'Key logistics partner',
-    additionalComments: 'Supports scrapping ecosystem'
+    customerName: 'Premium Date Processors',
+    businessType: 'Food Processor',
+    primaryFoodProductType: 'Nuts & Dates',
+    facilityType: 'Processing Plant',
+    installedSortingCapacity: '7 tons/hour',
+    numberOfSortingLines: 2,
+    keyContactPerson: 'Maria Garcia',
+    designation: 'Production Manager',
+    emailAddress: 'm.garcia@premiumdates.com',
+    phoneNumber: '+1 555 1000',
+    linkedInProfile: 'linkedin.com/in/mariagarcia',
+    websiteUrl: 'www.premiumdates.com',
+    annualSortingMachineProcurement: '$400,000',
+    preferredProcurementModel: 'Distributor',
+    averageProcurementLeadTime: '8 weeks',
+    replacementCycleOfMachines: '4 years',
+    levelOfAutomation: 'Manual',
+    percentageOfLinesWithPLC: '30%',
+    useOfAIorVisionBasedSorting: 'No',
+    predictiveMaintenanceTools: 'Low',
+    remoteMonitoringCapability: 'No',
+    plannedCapacityExpansion: '18%',
+    expectedNewSortingMachinePurchases: '1 machine',
+    newProductIntroductionPlanned: 'No',
+    newFacilityConstructionPlanned: 'No',
+    customerBenchmarking: 'Niche player',
+    additionalComments: 'Specialty products'
   }
 ]
 
@@ -320,27 +375,30 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
     setOpenPreposition(openPreposition === num ? null : num)
   }
 
-  // Common Customer Information header cells (5 columns)
+  // Common Customer Information header cells (6 columns)
   const renderCustomerInfoHeaders = () => (
     <>
       <th className="bg-[#E8D4B8] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[150px]">
         <div>Customer/Company Name</div>
       </th>
       <th className="bg-[#E8D4B8] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[180px]">
-        <div>Business Type</div>
-        <div className="font-normal text-[10px] text-gray-600">OEM Partner / Independent / Scrapper / Recycler / Fleet Operator</div>
+        <div>Type of Business</div>
+        <div className="font-normal text-[10px] text-gray-600">(Food Processor, Agribusiness Operator, Packager, Distributor)</div>
       </th>
       <th className="bg-[#E8D4B8] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
-        <div>Core Business Activities</div>
-        <div className="font-normal text-[10px] text-gray-600">Scrapping / Dismantling / Recycling / Logistics</div>
+        <div>Primary Food Product Type</div>
+        <div className="font-normal text-[10px] text-gray-600">(Fruits & Vegetables, Grains & Pulses, Nuts & Dates, Nuts & Dates)</div>
+      </th>
+      <th className="bg-[#E8D4B8] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[180px]">
+        <div>Facility Type</div>
+        <div className="font-normal text-[10px] text-gray-600">(Processing Plant, Sorting Center, Packaging Center, Distribution Center, Packaging Center)</div>
       </th>
       <th className="bg-[#E8D4B8] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[150px]">
-        <div>Geographic Presence</div>
-        <div className="font-normal text-[10px] text-gray-600">Pan India / Regional / Local</div>
+        <div>Installed Sorting Capacity</div>
+        <div className="font-normal text-[10px] text-gray-600">(Tons per Hour)</div>
       </th>
-      <th className="bg-[#E8D4B8] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
-        <div>Vehicle Categories Handled</div>
-        <div className="font-normal text-[10px] text-gray-600">Passenger Vehicles, Commercial Vehicles, Two Wheelers EVs</div>
+      <th className="bg-[#E8D4B8] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[120px]">
+        <div>Number of Sorting Lines</div>
       </th>
     </>
   )
@@ -357,14 +415,15 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
     </>
   )
 
-  // Common Customer Information data cells (5 columns)
+  // Common Customer Information data cells (6 columns)
   const renderCustomerInfoCells = (customer: CustomerData) => (
     <>
       <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.customerName}</td>
       <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.businessType}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.coreBusinessActivities}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.geographicPresence}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.vehicleCategoriesHandled}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.primaryFoodProductType}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.facilityType}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.installedSortingCapacity}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.numberOfSortingLines}</td>
     </>
   )
 
@@ -386,83 +445,103 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
     </>
   )
 
-  // Professional Drivers header cells (3 columns)
-  const renderProfessionalDriversHeaders = () => (
+  // Procurement & Purchase Metrics header cells (4 columns)
+  const renderProcurementHeaders = () => (
     <>
-      <th className="bg-[#98FB98] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[220px]">
-        <div>Primary Business Objective</div>
-        <div className="font-normal text-[10px] text-gray-600">Compliance / Revenue / Sustainability / Expansion / Circular Economy Focus Level / ESG and Sustainability Targets / EV and Battery Recycling / Interest / Expansion Plans / New Facilities / Capacity Upgrade</div>
+      <th className="bg-[#98FB98] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
+        <div>Annual Sorting Machine Procurement</div>
+        <div className="font-normal text-[10px] text-gray-600">(USD$)</div>
       </th>
-      <th className="bg-[#98FB98] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[220px]">
-        <div>Key Pain Points</div>
-        <div className="font-normal text-[10px] text-gray-600">ELV Supply Availability / Disposal of aging fleet / EV battery disposal / End of lease disposal</div>
+      <th className="bg-[#98FB98] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
+        <div>Preferred Procurement Model</div>
+        <div className="font-normal text-[10px] text-gray-600">(In-House, Distributor, System)</div>
       </th>
-      <th className="bg-[#98FB98] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[220px]">
-        <div>Upcoming Triggers and Initiatives</div>
-        <div className="font-normal text-[10px] text-gray-600">Fleet renewal / EV expansion / Fleet upgrade programs / EV lifecycle management / Lease portfolio renewal / Recycling investments</div>
+      <th className="bg-[#98FB98] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[180px]">
+        <div>Average Procurement Lead Time</div>
+        <div className="font-normal text-[10px] text-gray-600">(Weeks)</div>
+      </th>
+      <th className="bg-[#98FB98] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[180px]">
+        <div>Replacement Cycle of Machines</div>
+        <div className="font-normal text-[10px] text-gray-600">(Years)</div>
       </th>
     </>
   )
 
-  // Professional Drivers data cells
-  const renderProfessionalDriversCells = (customer: CustomerData) => (
+  // Procurement & Purchase Metrics data cells
+  const renderProcurementCells = (customer: CustomerData) => (
     <>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.primaryBusinessObjective}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.keyPainPoints}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.upcomingTriggersAndInitiatives}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.annualSortingMachineProcurement}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.preferredProcurementModel}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.averageProcurementLeadTime}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.replacementCycleOfMachines}</td>
     </>
   )
 
-  // Purchasing Behaviour Metrics header cells (3 columns)
-  const renderPurchasingHeaders = () => (
+  // Digital & Technology Adoption Metrics header cells (5 columns)
+  const renderDigitalTechHeaders = () => (
     <>
       <th className="bg-[#E0CFE0] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
-        <div>Vendor Selection Criteria</div>
-        <div className="font-normal text-[10px] text-gray-600">Cost, compliance, speed</div>
+        <div>Level of Automation</div>
+        <div className="font-normal text-[10px] text-gray-600">(Manual, Semi-Automatic, Automatic, Fully)</div>
       </th>
-      <th className="bg-[#E0CFE0] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[180px]">
-        <div>Preferred Vendor Type</div>
-        <div className="font-normal text-[10px] text-gray-600">Local / Global / Integrated</div>
+      <th className="bg-[#E0CFE0] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
+        <div>Percentage of Lines with PLC or SCADA</div>
+        <div className="font-normal text-[10px] text-gray-600">Systems (Yes/No, %)</div>
       </th>
-      <th className="bg-[#E0CFE0] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[180px]">
-        <div>Contract Duration Preference</div>
+      <th className="bg-[#E0CFE0] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
+        <div>Use of AI or Vision Based Sorting</div>
+        <div className="font-normal text-[10px] text-gray-600">Systems (Yes/No)</div>
+      </th>
+      <th className="bg-[#E0CFE0] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
+        <div>Predictive Maintenance Tools and Adoption</div>
+        <div className="font-normal text-[10px] text-gray-600">(Low, Medium, High)</div>
+      </th>
+      <th className="bg-[#E0CFE0] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
+        <div>Remote Monitoring and Diagnostics Capability</div>
+        <div className="font-normal text-[10px] text-gray-600">(Yes or No)</div>
       </th>
     </>
   )
 
-  // Purchasing Behaviour Metrics data cells
-  const renderPurchasingCells = (customer: CustomerData) => (
+  // Digital & Technology Adoption Metrics data cells
+  const renderDigitalTechCells = (customer: CustomerData) => (
     <>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.vendorSelectionCriteria}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.preferredVendorType}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.contractDurationPreference}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.levelOfAutomation}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.percentageOfLinesWithPLC}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.useOfAIorVisionBasedSorting}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.predictiveMaintenanceTools}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.remoteMonitoringCapability}</td>
     </>
   )
 
-  // Solution Requirements header cells (3 columns)
-  const renderSolutionHeaders = () => (
+  // Future Demand & Expansion Metrics header cells (4 columns)
+  const renderFutureExpansionHeaders = () => (
     <>
-      <th className="bg-[#FFE4B5] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[250px]">
-        <div>Preferred Solution Type</div>
-        <div className="font-normal text-[10px] text-gray-600">(Depollution and Hazardous Waste Handling Systems / Battery Recycling and EV Processing Solutions / Data Reporting and Audit Tools)</div>
+      <th className="bg-[#FFE4B5] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[220px]">
+        <div>Planned Capacity Expansion in next 3 Years</div>
+        <div className="font-normal text-[10px] text-gray-600">(Percentage of Increase)</div>
       </th>
       <th className="bg-[#FFE4B5] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[220px]">
-        <div>Preferred Deployment Model</div>
-        <div className="font-normal text-[10px] text-gray-600">Own Facility / JV / Third Party / Long Term Service Agreement Interest / Battery recycling, audit tools</div>
+        <div>Expected New Sorting Machine Purchases in next 3 Years</div>
       </th>
-      <th className="bg-[#FFE4B5] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[250px]">
-        <div>Performance Expectations</div>
-        <div className="font-normal text-[10px] text-gray-600">Processing Efficiency Targets / Recovery Rate Expectations / Environmental Impact Reduction Goals / Third party, LTSA / Own +</div>
+      <th className="bg-[#FFE4B5] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[220px]">
+        <div>New Product Introduction Planned</div>
+        <div className="font-normal text-[10px] text-gray-600">(Fresh produce, nuts, grains or No)</div>
+      </th>
+      <th className="bg-[#FFE4B5] border border-gray-300 px-3 py-2 text-left text-xs font-semibold text-black min-w-[200px]">
+        <div>New Facility Construction Planned</div>
+        <div className="font-normal text-[10px] text-gray-600">(Yes or No)</div>
       </th>
     </>
   )
 
-  // Solution Requirements data cells
-  const renderSolutionCells = (customer: CustomerData) => (
+  // Future Demand & Expansion Metrics data cells
+  const renderFutureExpansionCells = (customer: CustomerData) => (
     <>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.preferredSolutionType}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.preferredDeploymentModel}</td>
-      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.performanceExpectations}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.plannedCapacityExpansion}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.expectedNewSortingMachinePurchases}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.newProductIntroductionPlanned}</td>
+      <td className="border border-gray-300 px-3 py-2 text-sm text-black">{customer.newFacilityConstructionPlanned}</td>
     </>
   )
 
@@ -487,13 +566,13 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
     </>
   )
 
-  // Proposition 1 Table - Customer Information (5) + Contact Details (6) = 11 columns
+  // Proposition 1 Table - Customer Information (6) + Contact Details (6) = 12 columns
   const renderPreposition1Table = () => (
     <div className="overflow-x-auto">
       <table className="min-w-full border-collapse">
         <thead>
           <tr>
-            <th colSpan={5} className="bg-[#D4A574] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
+            <th colSpan={6} className="bg-[#D4A574] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
               Customer Information
             </th>
             <th colSpan={6} className="bg-[#87CEEB] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
@@ -517,26 +596,26 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
     </div>
   )
 
-  // Proposition 2 Table - Customer Info (5) + Contact (6) + Professional Drivers (3) = 14 columns
+  // Proposition 2 Table - Customer Info (6) + Contact (6) + Procurement & Purchase Metrics (4) = 16 columns
   const renderPreposition2Table = () => (
     <div className="overflow-x-auto">
       <table className="min-w-full border-collapse">
         <thead>
           <tr>
-            <th colSpan={5} className="bg-[#D4A574] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
+            <th colSpan={6} className="bg-[#D4A574] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
               Customer Information
             </th>
             <th colSpan={6} className="bg-[#87CEEB] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
               Contact Details
             </th>
-            <th colSpan={3} className="bg-[#90EE90] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
-              Professional Drivers
+            <th colSpan={4} className="bg-[#90EE90] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
+              Procurement & Purchase Metrics
             </th>
           </tr>
           <tr className="bg-gray-100">
             {renderCustomerInfoHeaders()}
             {renderContactHeaders()}
-            {renderProfessionalDriversHeaders()}
+            {renderProcurementHeaders()}
           </tr>
         </thead>
         <tbody>
@@ -544,7 +623,7 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
             <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
               {renderCustomerInfoCells(customer)}
               {renderContactCells(customer)}
-              {renderProfessionalDriversCells(customer)}
+              {renderProcurementCells(customer)}
             </tr>
           ))}
         </tbody>
@@ -552,26 +631,26 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
     </div>
   )
 
-  // Proposition 3 Table - All sections: Customer Info (5) + Contact (6) + Professional Drivers (3) + Purchasing (3) + Solution (3) + CMI (2) = 22 columns
+  // Proposition 3 Table - All sections: Customer Info (6) + Contact (6) + Procurement (4) + Digital & Tech (5) + Future Expansion (4) + CMI (2) = 27 columns
   const renderPreposition3Table = () => (
     <div className="overflow-x-auto">
       <table className="min-w-full border-collapse">
         <thead>
           <tr>
-            <th colSpan={5} className="bg-[#D4A574] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
+            <th colSpan={6} className="bg-[#D4A574] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
               Customer Information
             </th>
             <th colSpan={6} className="bg-[#87CEEB] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
               Contact Details
             </th>
-            <th colSpan={3} className="bg-[#90EE90] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
-              Professional Drivers
+            <th colSpan={4} className="bg-[#90EE90] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
+              Procurement & Purchase Metrics
             </th>
-            <th colSpan={3} className="bg-[#D8BFD8] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
-              Purchasing Behaviour Metrics
+            <th colSpan={5} className="bg-[#D8BFD8] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
+              Digital & Technology Adoption Metrics
             </th>
-            <th colSpan={3} className="bg-[#FFDAB9] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
-              Solution Requirements
+            <th colSpan={4} className="bg-[#FFDAB9] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
+              Future Demand & Expansion Metrics
             </th>
             <th colSpan={2} className="bg-[#87CEEB] border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-black">
               CMI Insights
@@ -580,9 +659,9 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
           <tr className="bg-gray-100">
             {renderCustomerInfoHeaders()}
             {renderContactHeaders()}
-            {renderProfessionalDriversHeaders()}
-            {renderPurchasingHeaders()}
-            {renderSolutionHeaders()}
+            {renderProcurementHeaders()}
+            {renderDigitalTechHeaders()}
+            {renderFutureExpansionHeaders()}
             {renderCMIHeaders()}
           </tr>
         </thead>
@@ -591,9 +670,9 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
             <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
               {renderCustomerInfoCells(customer)}
               {renderContactCells(customer)}
-              {renderProfessionalDriversCells(customer)}
-              {renderPurchasingCells(customer)}
-              {renderSolutionCells(customer)}
+              {renderProcurementCells(customer)}
+              {renderDigitalTechCells(customer)}
+              {renderFutureExpansionCells(customer)}
               {renderCMICells(customer)}
             </tr>
           ))}
